@@ -1,19 +1,25 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 5000
 const logger = require('morgan')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const config = require('./config')
 const usersRouter = require('./server/routes/Users')
 
-mongoose.connect("mongodb://127.0.0.1:27017/woody")
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    credentials: true
+};
+
+mongoose.connect('mongodb://127.0.0.1:27017/woody')
     .then(() => console.log('몽고DB 연결완료!'))
     .catch(e => {
         console.log(`몽고DB 연결 실패: ${e}`)
         // 적절한 에러 핸들링 수행
     })
 
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(logger('tiny'))
 app.use('/api/users', usersRouter)
