@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>budget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/front/css/budget.css">
+</head>
+<body>  
+    <!-- 메인 -->
+    <div class="container">
+        <h1>간단한 예산 계산기</h1>
+        <form id="expense-form">
+            <!-- 지출 카테고리 입력 필드 추가 -->
+            <label for="주거비">주거비</label>
+            <input type="number" placeholder="주거비를 입력하세요.(전세, 월세, 관리비 등)">
+            <label for="식비">식비</label>
+            <input type="number" placeholder="식비를 입력하세요.(식료품, 외식비, 간식 등)">
+            <label for="교통비">교통비</label>
+            <input type="number" placeholder="교통비를 입력하세요.(자동차유지비, 주유비, 교통카드 등)">
+            <label for="통신비">통신비</label>
+            <input type="number" placeholder="통신비를 입력하세요.(인터넷, 휴대폰 요금 등)">
+            <label for="생활용품">생활용품</label>
+            <input type="number" placeholder="생활용품비를 입력하세요.(세제, 화장지, 칫솔 등)">
+            <label for="의료비">의료비</label>
+            <input type="number" placeholder="의료비를 입력하세요.(약값, 병원비, 보험료 등)">
+            <label for="교육비">교육비</label>
+            <input type="number" placeholder="교육비를 입력하세요.(학원비, 교재비, 학비 등)">            
+            <label for="문화생활">문화생활</label>
+            <input type="number" placeholder="문화생활를 입력하세요.(영화, 공연, 책 등)">
+            <label for="기타">기타</label>
+            <input type="number" placeholder="기타비를 입력하세요.(패션, 뷰티, 취미 등)">
+        </form>
+
+        <div class="total">
+            <h2>총 지출</h2>
+            <span id="total-expenses">0</span> 원
+        </div>
+    </div>
+    
+    <script src="/front/js/category/budget.js"></script>
+</body>
+</html>

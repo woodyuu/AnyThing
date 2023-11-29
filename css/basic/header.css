@@ -1,0 +1,48 @@
+@import url('./global.css');
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+header{ 
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 1rem #eee;
+    position: fixed;
+    top: 0;
+    width: 100%;   
+    z-index: 3;     
+    background: #fff;
+}
+.headerbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.headerbox a {
+    text-decoration: none;
+}
+.headerbox a h1{
+    font-family: 'Gamja Flower', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.headerbox a h1:hover{
+    color: var(--serve-color);
+}
+
+.logoutBtn{
+    background: var(--serve-color);
+    border: none;
+    border-radius: 2rem;
+    height: 2.5rem; width: 4.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: gray
+}
+.logoutBtn:hover{
+    background: var(--main-color);
+    color: black;
+}

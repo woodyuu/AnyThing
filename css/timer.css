@@ -1,0 +1,68 @@
+@import url('/front/css/basic/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+body{
+  font-family: var(--font-family);
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container{
+  max-width: 50rem;
+  background: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  border-radius: .5rem;
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #ebae5e; 
+  font-size: 3.5rem;
+}
+
+.timer{
+  font-size: 3rem;
+  margin-bottom: 1.5;
+}
+.timer-display{
+  color:#5f5d5a;
+}
+.timer-modes button{
+  background: var(--serve-color);
+}
+.timer-controls button,
+.timer-modes button{
+  margin: .5rem;
+  font-size: 1rem;
+  font-family: 'Gamja Flower', cursive;
+  color: rgb(39, 38, 38);
+  cursor: pointer;  
+  border: 1px solid var(--main-color);
+  border-radius: .2rem;
+}
+.timer-controls button:hover,
+.timer-modes button:hover{
+  border: 1px solid  #ebae5e;
+}
+
+.user-guide{
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.user-guide h2{
+  margin: 1rem auto;
+  color: #ebae5e; 
+}
+
+.user-guide p{
+  font-family: 'Gamja Flower', cursive;
+  color: rgb(68, 62, 62);
+}

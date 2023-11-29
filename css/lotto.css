@@ -1,0 +1,200 @@
+@import url('/front/css/basic/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+#title{
+    font-size: 4rem;
+    font-family: var(--font-family);
+    margin: 1rem 0
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding: .8rem;  
+    box-shadow: 0 0 1rem #ddd; 
+    border-radius: 25px; 
+}
+
+#numbers{
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border: 3px solid pink;
+    border-radius: 1.5rem;
+}
+
+#numbers .ball{
+    width: 4rem;
+    height: 4rem;
+    margin-right: .7rem;
+    line-height: 4rem;
+    font-size: 3rem;
+    font-family: var(--font-family);
+    border-radius: 50%;
+    text-align: center;
+}
+
+#numbers .ball.blue{
+    background: #69c8f2
+}
+
+#numbers .ball.red{
+    background:#ff7272
+}
+
+#numbers .ball.grey{
+    background:#aaa
+}
+
+#numbers .ball.bonus{
+    background: #b0d840
+}
+
+#numbers .ball.done{
+    animation: done .3s linear
+}
+
+#numbers .ball:last-child{
+    margin-right: 0
+}
+
+#numbers .plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.2rem;
+    font-size: 3rem;
+    font-weight: bold
+}
+
+#btn{
+    position: relative;
+    display: block;
+    padding: .6rem 1rem;
+    background: #fff;
+    color: #666;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 2rem;
+    border: 2px solid #666;
+    border-radius: .5rem;
+    overflow: hidden;
+    transition: .5s;
+    user-select: none
+}
+
+#btn:hover{    
+    margin-top: .6rem;
+    background: #999;
+    color: #fff
+}
+
+#btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: .6rem;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #666;
+    transition: .5s
+}
+
+#btn:hover::after{
+    transform: translateY(.6rem)
+}
+
+#btn.hide {
+    transform: scale(0)
+}
+
+@media (max-width:700px){
+    #wrapper{
+        width: 30rem;
+    }
+    #title{
+        font-size: 2rem;
+    }
+    #numbers{
+        width: 100%;
+    }
+    #numbers .ball{
+        width: 3rem; height: 3rem;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-right: .3rem;
+    }
+    #numbers .plus{
+        font-size: 2rem;
+    }
+    #btn{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px){
+    #wrapper{
+        width: 25rem;
+    }
+    #numbers .ball{
+        width: 2rem; height: 2rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0;
+    }
+}
+@media (max-width: 400px){
+    #wrapper{
+        width: 22rem;
+    }
+    #numbers .ball{
+        width: 1.8rem; height: 1.8rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+}
+@media (max-width: 300px){
+    #wrapper{
+        width: 17rem;
+    }
+    #numbers .ball{
+        width: 1.3rem; height: 1.3rem;
+        font-size: 1rem;
+        line-height: 1.3rem;        
+    }
+    #numbers .plus{
+        font-size: 1rem;
+        padding: 0 .6rem;
+    }
+    #title{
+        font-size: 1rem;
+    }
+    #btn{
+        font-size: .7rem;
+    }
+}
+/* @media screen and (max-width: 800px){
+    #numbers{
+        flex-direction: column;
+        align-items: center
+    }
+
+    #numbers .ball{
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+
+    #numbers .ball:last-child{
+        margin-bottom: 0
+    }
+} */
