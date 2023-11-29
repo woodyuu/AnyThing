@@ -59,7 +59,7 @@ function userInfo(){
     }else if(!emailPattern.test(email.value)){
         swal('올바른 이메일 형식이 아닙니다.', '', 'error')
     }else{
-        fetch('http://127.0.0.1:4000/api/users/register', {
+        fetch('https://port-0-anything-32updzt2alpj5f9av.sel5.cloudtype.app/api/users/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -116,7 +116,7 @@ idCheck.addEventListener('click', function(e){
         return
     }
 
-    fetch('http://127.0.0.1:4000/api/users/check-id', {
+    fetch('https://port-0-anything-32updzt2alpj5f9av.sel5.cloudtype.app/api/users/check-id', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -205,7 +205,7 @@ function loginInfo(){
     }    
     
     if(userId.value !== '' && userPw.value !== ''){
-        fetch('http://127.0.0.1:4000/api/users/login', {
+        fetch('https://port-0-anything-32updzt2alpj5f9av.sel5.cloudtype.app/api/users/login', {
             method: 'POST', 
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -256,7 +256,7 @@ searchID.addEventListener('click', function(e){
         
         const email = inputValue.trim()
         if(email !== ''){       
-            fetch('http://127.0.0.1:4000/api/users/find-id', {
+            fetch('https://port-0-anything-32updzt2alpj5f9av.sel5.cloudtype.app/api/users/find-id', {
                 method: 'POST', 
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
@@ -296,7 +296,7 @@ resetPWBtn.addEventListener('click', function (e) {
 
         const id = inputValue.trim()
         if(id !== ''){
-            fetch('http://127.0.0.1:4000/api/users/find-password', {
+            fetch('https://port-0-anything-32updzt2alpj5f9av.sel5.cloudtype.app/api/users/find-password', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userID: id })
