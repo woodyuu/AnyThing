@@ -1,0 +1,409 @@
+@import url('/front/css/basic/global.css');
+@import url('/front/css/basic/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+.container{    
+    height: 100vh;
+    display: flex;    
+    align-items: center;
+    justify-content: center;   
+}
+
+.section{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;    
+}
+
+.title{      
+    margin-bottom: 4rem;
+}
+.title h1{
+    font-size: 4rem;    
+    font-family: 'Gamja Flower', cursive;
+    color: #ebae5e;      
+    cursor: pointer;
+}
+.title h1:hover{
+    color: var(--main-color);
+}
+
+.login-box{
+    border: 1px solid transparent;
+    border-radius: 25px;
+    box-shadow: 0 0 1rem #ddd;
+    width: 40rem;
+    height: 20rem;
+    text-align: center;
+    margin: 0 auto;    
+}
+.login-form{
+    width: 70%; height: 100%;
+    margin: 0 auto;   
+    text-align: center; 
+}
+.login-form .id-box, .login-form .pw-box{
+    width: 100%;
+    margin-top: 2rem;
+}
+.login-form .id-box input, 
+.login-form .pw-box input{
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gray;
+    font-family: var(--font-family);
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    padding-left: 1rem;
+}
+.login-form .id-box ::placeholder, 
+.login-form .pw-box ::placeholder,
+.login-form p{
+    color: gray;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+.login-form .login-btn{
+    width: 50%;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: #333;
+    background: var(--main-color);
+    cursor: pointer;    
+}
+.login-box .login-form .button-box{    
+    text-align: center;
+    margin: 1rem auto;
+}
+.login-box .login-form .button-box button{
+    border-radius: 2rem;
+    border: none;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: gray;
+    background: none;
+    cursor: pointer;
+}
+.login-form .login-btn:hover{
+    background: var(--serve-color);
+}
+.login-form p{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+.login-form .registerBtn{
+    margin-top: .5rem;
+}
+
+.back{
+    width: 100vw; height: 100vh;
+    background: #fff;
+    z-index: 2;
+    position: fixed;
+}
+.register{
+    border: 1px solid transparent;
+    width: 40rem; height: 50rem;
+    border-radius: 25px;
+    box-shadow: 0 0 1rem #ddd;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    z-index: 3;
+    background: #fff;
+}
+.register h2{
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-family: 'Gamja Flower', cursive; 
+    margin-top: 3rem; 
+}
+.register .username, 
+.register .useremail, .register .userpw, .register .userpw2,
+.register .date-box, .register .gender{   
+    width: 70%; height: 4rem;
+    margin: .5rem auto;    
+}
+.register .closebtn{
+    width: 2rem;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 90%;    
+    cursor: pointer;
+}
+.register .closebtn span{
+    font-size: 2rem;
+    font-weight: bold;
+    color: gray;
+}
+.register .info input:not(.userid){
+    border: 1px solid var(--main-color);
+    border-radius: 1.2rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    color: gray;
+    font-family: var(--font-family);
+}
+.register .info .idbox{
+    border: 1px solid var(--main-color);
+    width: 70%; height: 4rem;
+    margin: 0rem auto;
+    border-radius: 1.2rem;
+}
+.register .info .idbox .userid{
+    width: 70%; height: 100%;
+    border: none;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    color: gray;
+}
+.register .info .idbox input::placeholder{
+    color: gray;
+    font-family: var(--font-family);
+}
+.register .info .idbox .idcheck{
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    background: var(--serve-color);
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+.register .info input::placeholder{
+    color: gray;
+    font-family: var(--font-family);
+}
+.register p{
+    font-size: 1.2rem;    
+    font-family: 'Jua', sans-serif;
+    color: gray;
+    margin-bottom: .5rem;
+}
+.register .year, .register .month, .register .date{
+    width: 4rem;
+    color: gray;  
+    font-family: var(--font-family);  
+    border: 1px solid gray;  
+    border-radius: .3rem;
+    padding-left: .3rem;
+}
+
+.register .year::placeholder, 
+.register .month::placeholder,
+.register .date::placeholder{
+    font-family: var(--font-family);
+}
+.register .genderCoise{    
+    color: darkgray;
+    font-family: 'Jua', sans-serif;  
+    margin: 0 auto;  
+}
+.register .genderCoise label{
+    margin-right: 1rem;
+}
+.register .genderCoise label input{
+    accent-color: grey;
+    margin-right: .3rem;
+}
+.register .createBtn{
+    width: 30%; height: 3rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    border: 1px solid var(--main-color);
+    background: var(--serve-color);
+    border-radius: 25px;
+    color: gray;
+    font-weight: bold;
+    font-family: 'Gamja Flower', cursive;
+    cursor: pointer;
+}
+.register .createBtn:hover{
+    background: var(--main-color);
+    color: #fff;
+}
+.register input[type="number"]::-webkit-outer-spin-button,
+.register input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.close{
+    display: none;
+}
+@media (max-width: 700px){
+    .title h1{
+        font-size: 3rem;
+    }
+    .login-box{
+        width: 30rem;
+    }
+    .register{
+        width: 30rem; height: 45rem;
+    }
+}    
+
+@media (max-width: 600px){    
+    .register h2{
+        font-size: 2rem;
+    }
+    .register .closebtn span{
+        font-size: 1.5rem;
+    }
+    .register .info{
+        font-size: .3rem;
+    }
+    .register .info .idbox input::placeholder,
+    .register .info input::placeholder,
+    .register p, .register .genderCoise label,
+    .register .createBtn{
+        font-size: 1rem;
+    }
+    .register .info .idbox .idcheck{
+        font-size: .8rem;
+        height: 1.5rem;
+    }
+    .register .info .idbox,
+    .register .info input{
+        height: 2.5rem;
+    }
+} 
+
+@media (max-width: 500px){
+    .title h1{
+        font-size: 2.5rem;
+    }
+    .login-box{
+        width: 25rem;
+    }
+    .register{
+        width: 25rem; height: 35rem;
+    } 
+    .register .info .idbox input::placeholder,
+    .register .info input::placeholder,
+    .register p, .register .genderCoise label,
+    .register .createBtn{
+        font-size: .8rem;
+    }    
+    .register .date-box input{
+        width: 20%;
+    }
+    .register .date-box input::placeholder{
+        font-size: .3rem;
+    }
+}
+
+@media (max-width: 400px){
+    .title{
+        margin-bottom: 2rem;
+    }
+    .title h1{
+        font-size: 2.5rem;        
+    }
+    .login-box{
+        width: 20rem;
+    }
+    .register{
+        width: 20rem; height: 30rem;
+    }    
+    .register .closebtn span{
+        font-size: 1.2rem;             
+    }
+    .register h2{
+        margin-top: 2rem;
+    }    
+    .register .info .idbox input::placeholder,
+    .register .info input::placeholder,
+    .register p, .register .genderCoise label,
+    .register .createBtn{
+        font-size: .5rem;
+    }
+    .register .info .idbox .idcheck{
+        font-size: .5rem;
+    }
+    .register .info .idbox,
+    .register .info input{
+        height: 2.1rem;
+    }
+    .register .date-box input{
+        width: 20%;
+    }
+    .register .date-box input::placeholder{
+        font-size: .3rem;
+    }
+}
+@media (max-width: 300px){
+    .title{
+        margin-bottom: 1rem;
+    }
+    .title h1{
+        font-size: 2rem;        
+    }
+    .login-box{
+        width: 15rem;
+    }
+    .login-box .id-box .userID,
+    .login-box .pw-box .userPW{
+        font-size: 1rem;
+    }
+    .login-form .login-btn{
+        font-size: .9rem;
+        margin-top: 1.5rem;
+    }
+    .login-form p,
+    .login-box .login-form .button-box button{
+        font-size: .6rem;
+    }
+    .register{
+        width: 16rem; height: 25rem;
+    }
+    .register h2{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    .register .info input:not(.userid){
+        font-size: .3rem;
+    }
+    .register .info .idbox,
+    .register .info input{
+        height: 1.5rem;
+    }
+    .register .info .idbox .userid{
+        font-size: .3rem;
+    }
+    .register .info .idbox input::placeholder,
+    .register .info input::placeholder,
+    .register p, .register .genderCoise label,
+    .register .createBtn{
+        font-size: .1rem;
+    }
+    .register .info .idbox .idcheck{        
+        height: 1.5rem;   width: 1.5rem;     
+    }
+    .register .info .idbox .userid::placeholder{
+        font-size: .2rem;        
+    }
+    .register .info .idbox,
+    .register .info input{
+        height: 1.5rem;
+    }
+    .register .info .idbox .idcheck{
+        font-size: .2rem;
+    }    
+}
+
+
+

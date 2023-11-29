@@ -1,0 +1,76 @@
+@import url('/front/css/basic/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+body{
+    font-family: var(--font-family);
+    /* background-color: #f5f5f5; */
+}
+
+.container{
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-top: 2rem;    
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--import-color);  
+}
+
+.row{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;    
+    margin: 0 auto; 
+}
+
+.quiz-card{
+    max-width: 19rem;
+    width: 15rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.quiz-card h3{
+    margin: 0;
+    text-align: center;
+}
+
+.quiz-card:hover{
+    background: #eee;
+}
+
+.quiz-question{
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    font-family: 'Gamja Flower', cursive;    
+}
+
+.quiz-options{
+    display: flex;
+    flex-direction: column;    
+}
+
+.quiz-option{
+    margin-bottom: 1rem;
+}
+
+.buttons{
+    margin-left: 3rem;    
+}
+.submit-quiz, .back-to-list{
+    font-family: 'Gamja Flower', cursive;
+    font-size: 1rem;    
+    background: var(--serve-color);
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+.submit-quiz:hover, 
+.back-to-list:hover{
+    background: var(--main-color);
+}

@@ -1,0 +1,89 @@
+@import url('/front/css/basic/global.css');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gamja+Flower&family=Jua&family=Nanum+Brush+Script&display=swap');
+
+body{
+    font-family: var(--font-family);    
+}
+
+.container{
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2rem; 
+    overflow-y:hidden;
+}
+.container h1{
+    font-size: 3.5rem;
+    color: #eecc9f;
+}
+form{
+    display: flex;
+    flex-direction: column;         
+}
+
+label{
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    color: #666;
+}
+
+input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #666;
+    width: 100%;
+    font-family: 'Gamja Flower', cursive;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    border: 2px solid var(--main-color);
+}
+input::placeholder{
+    font-family: 'Gamja Flower', cursive;
+    color: #666;
+}
+
+.total{
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ebae5e;
+}
+
+#expense-form input[type="number"]::-webkit-outer-spin-button,
+#expense-form input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 600px){
+    .container h1{
+        font-size: 2.5rem;
+    }
+    .total{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px){
+    .container h1{
+        font-size: 2rem;
+    }   
+    input{
+        font-size: .7rem;
+    } 
+}
+@media (max-width: 400px){
+    .container h1{
+        font-size: 1.5rem;
+    } 
+}
+@media (max-width: 300px){
+    .container h1{
+        font-size: 1rem;
+    }
+    .total{
+        font-size: .7rem;
+    }
+    label{
+        font-size: .7rem;
+    }   
+}
