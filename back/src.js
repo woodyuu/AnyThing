@@ -3,14 +3,8 @@ const app = express()
 const port = 4000
 const logger = require('morgan')
 const mongoose = require('mongoose')
-// const cors = require('cors')
 const config = require('./config')
 const usersRouter = require('./server/routes/Users')
-
-// const corsOptions = {
-//     origin: 'http://127.0.0.1:5501',
-//     credentials: true
-// };
 
 mongoose.connect(config.MONGODB_URL)
     .then(() => console.log('몽고DB 연결완료!'))
