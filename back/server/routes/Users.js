@@ -1,7 +1,6 @@
 const express = require('express')
 const User = require('../models/users')
 const expressAsyncHandler = require('express-async-handler')
-const { createToken, isAuth } = require('../../auth')
 const { body, validationResult } = require("express-validator")
 const crypto = require('crypto');
 
