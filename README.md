@@ -3,18 +3,8 @@
 ## 웹페이지명 : AnyThing(AnyT)
 ## 프로젝트 기간 : 23.8.14 ~ 8.29
 ## 기술스택 
-### node.js : v20.5.0
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white%22"/>
 ### mongodb : v6.0.8
-### 사용한 패키지
-#### mongoose : ^7.4.4
-#### express : ^4.18.2
-#### express-async-handler : ^1.2.0
-#### express-validator : ^7.0.1
-#### sweetalert : ^2.1.2
-#### cors : ^2.8.5
-#### dotenv : ^16.3.1
-#### jsonwebtoken: ^9.0.1
-#### crypto : ^1.0.1
 
 ### 주요 내용
 #### 일상생활에서 간편하게 접근이 가능한 저관여 웹앱
