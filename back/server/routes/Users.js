@@ -114,6 +114,7 @@ router.post('/login', expressAsyncHandler(async (req, res, next) => {
             res.json({ ...SUCCESS, token, user: { name, email, userID, isAdmin, createdAt }})
         }
     }catch (error){
+        console.log(error)
         res.status(500).json(SERVER_ERROR)
     }
 }))
