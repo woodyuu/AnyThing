@@ -8,11 +8,11 @@ const config = require('./config')
 const usersRouter = require('./server/routes/Users')
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500',
+    origin: '*',
     credentials: true
 };
 
-mongoose.connect(config.MONGODB_URL)
+mongoose.connect("mongodb+srv://woody:vhrvnd17@woody.uugxmbw.mongodb.net/")
     .then(() => console.log('몽고DB 연결완료!'))
     .catch(e => {
         console.log(`몽고DB 연결 실패: ${e}`)
