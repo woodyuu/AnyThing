@@ -7,6 +7,13 @@
 <img src="https://img.shields.io/badge/Mongoose-F04D35?style=for-the-badge&logo=Mongoose&logoColor=white"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white">  <img src="https://img.shields.io/badge/Expess-000000?style=for-the-badge&logo=Express&logoColor=white"> <img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=Nodemon&logoColor=white"><br/>
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"> <img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
 
+### 사용방법
+```
+cd back
+npm install
+npm src.js
+```
+
 ### 주요 내용
 ```
 1. 일상생활에서 간편하게 사용가능하고 접근이 가능한 저관여 웹앱
