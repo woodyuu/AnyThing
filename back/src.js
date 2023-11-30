@@ -7,19 +7,19 @@ const cors = require('cors')
 const config = require('./config')
 const usersRouter = require('./server/routes/Users')
 
-// const corsOptions = {
-//     origin: 'http://127.0.0.1:5500',
-//     credentials: true
-// };
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    credentials: true
+};
 
-mongoose.connect('mongodb+srv://woody:vhrvnd17@woody.uugxmbw.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(config.MONGODB_URL)
     .then(() => console.log('몽고DB 연결완료!'))
     .catch(e => {
         console.log(`몽고DB 연결 실패: ${e}`)
         // 적절한 에러 핸들링 수행
     })
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(logger('tiny'))
 app.use('/api/users', usersRouter)
