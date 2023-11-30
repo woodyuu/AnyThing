@@ -2,21 +2,21 @@ const config = require('./config')
 const jwt = require('jsonwebtoken')
 
 //토큰생성
-// const createToken = (user) =>{ 
-//     return jwt.sign({
-//         _id: user._id,
-//         name: user.name,
-//         email: user.email,
-//         userId: user.userId,
-//         isAdmin: user.isAdmin,
-//         createdAt: user.createdAt,
-//     },
-//     config.JWT_SECRET, // jwt 비밀키
-//     {
-//         expiresIn: '7d', // 만료기한(7일)
-//         issuer: 'woody',
-//     })
-// }
+const createToken = (user) =>{ 
+    return jwt.sign({
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        userId: user.userId,
+        isAdmin: user.isAdmin,
+        createdAt: user.createdAt,
+    },
+    config.JWT_SECRET, // jwt 비밀키
+    {
+        expiresIn: '7d', // 만료기한(7일)
+        issuer: 'woody',
+    })
+}
 
 const isAuth = (req, res, next) => { // 권한을 확인하는 하우트핸들러
     const bearerToken = req.headers.authorization
