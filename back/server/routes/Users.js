@@ -110,8 +110,8 @@ router.post('/login', expressAsyncHandler(async (req, res, next) => {
             res.status(401).json(CLIENT_ERROR)
         }else{
             const { name, email, userID, isAdmin, createdAt } = loginUser
-            const token = createToken(loginUser)
-            res.json({ ...SUCCESS, token, user: { name, email, userID, isAdmin, createdAt }})
+            // const token = createToken(loginUser)
+            res.json({ ...SUCCESS, user: { name, email, userID, isAdmin, createdAt }})
         }
     }catch (error){
         console.log(error)
