@@ -44,6 +44,6 @@ logoutBtn.addEventListener('click', function(e){
     e.preventDefault()
 
     // 페이지 이동 후 방문 기록이 남지 않도록 처리
-    window.location.replace('../index.html')
+    window.location.replace('AnyThing/index.html')
 })
 
