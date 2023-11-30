@@ -220,7 +220,7 @@ function loginInfo(){
                 swal(`code:${data.code}, ${data.message}`, '', 'error')
             }else if(data.code === 200){
                 // alert(`code:${data.code}, ${data.message}`)                
-                window.location.href = '../html/main.html'
+                window.location.href = '/AnyThing/html/main.html'
             }else if(data.code === 400){
                 swal('아이디나 비밀번호 중 다시 확인하세요.', '', 'error')
             }
